@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chat.MainActivity">
+
+    <!-- add and AppBarLayout-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- We're going to "include" "layout", it's going to be the "app_bar_layout"(from app_bar_layout.xml)
+    and we're going to give it a name of "main_page_toolbar" -->
+        <!-- We define in "MainActivity" so it will show in the app -->
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout" />
+
+        <!-- add a TabLayout(tab bar) inside the AppBarLayout underneath the toolbar -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white">
+
+        </android.support.design.widget.TabLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- To set the content for our tabs we need a ViewPager -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_tabPager"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+    </android.support.v4.view.ViewPager>
+    <!--  NOTE: We are going to have 3 tabs and so we create 3 Fragment Activities (FriendsFragment, ChatsFragment, RequestFragment) -->
+</android.support.constraint.ConstraintLayout>

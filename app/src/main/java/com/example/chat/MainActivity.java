@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         mToolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Lapit Chat");
+        getSupportActionBar().setTitle("Chat");
 
         mAuth = FirebaseAuth.getInstance();
 

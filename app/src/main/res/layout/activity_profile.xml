@@ -38,16 +38,6 @@
         android:text="Current User Status"
         android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/profile_totalFriends"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="161dp"
-        android:text="Total Friends"
-        android:textColor="@android:color/white" />
-
     <Button
         android:id="@+id/profile_send_req_btn"
         android:layout_width="wrap_content"
